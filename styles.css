@@ -35,9 +35,12 @@
 }
 
 body {
+    background-color: hsl(0, 0%, 98%);
+}
+
+main {
     display: grid;
     place-items: center;
-    background-color: hsl(0, 0%, 98%);
     padding: 10% 8%;
 }
 
@@ -54,22 +57,25 @@ h2 {
 
 p {
     color: hsl(229, 6%, 66%);
-    font-size: 15px;
+    font-size: 0.94rem;
     font-weight: 400;
 }
 
 .header-txt {
-    text-align: center;
     margin-bottom: 60px;
 }
 
-.header-h> h1:first-child {
-    font-weight: 200;
+.header-txt>* {
+  text-align: center;
 }
 
 .header-h {
     margin-top: 60px;
     margin-bottom: 20px;
+}
+
+.header-h>h1>span {
+    font-weight: 200;
 }
 
 .cards {
@@ -85,7 +91,7 @@ p {
     gap: 30px;
     width: 100%;
     max-width: 300px;
-    height: 225px;
+    height: auto;
     padding: 30px;
     border-radius: 6px;
     border-top: 5px solid;
@@ -99,7 +105,7 @@ p {
 }
 
 .card-txt>p {
-    font-size: 12.5px;
+    font-size: 0.78rem;
 }
 
 .card-img {
@@ -127,6 +133,10 @@ p {
         width: 450px;
     }
 
+    h1 {
+        font-size: 2rem;
+    }
+
     .cards {
         display: grid;
         grid-template-columns: auto auto;
@@ -134,12 +144,12 @@ p {
 }
 
 @media screen and (min-width: 1160px) {
-    body {
-        padding: 0 8% 5%;
+    main {
+        padding: 2% 8% 5%;
     }
 
     h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .header-txt {
@@ -150,7 +160,7 @@ p {
         display: grid;
         gap: 30px;
         height: 500px;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
     .card1 {
